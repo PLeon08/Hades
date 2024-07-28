@@ -1,0 +1,142 @@
+.homecontainer {
+    --mainbgcolor: #101720;
+    --bgcontainer: #07183f;
+    --bgsubcontainer: #0B1D44;
+    --btncolor:rgb(14, 14, 88);
+    --txtcolor: #e7e8e3;
+    display: flex;
+    width: 100dvw;
+    height: 100dvh;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--mainbgcolor);
+}
+
+button {
+    color: white;
+    width: auto;
+    background-color: var(--btncolor);
+    border: none;
+}
+button:active{
+    background-color: rgb(6, 6, 61);
+}
+
+h1,
+h2,
+h3,
+p {
+    color: var(--txtcolor);
+}
+
+.conversationcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 0 1em 0;
+    padding: 2em;
+    height: auto;
+    width: 25em;
+    border-radius: 10px;
+    background-color: var(--bgcontainer);
+}
+
+.toolscontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.toolicon{
+    display: flex;
+    height: 5em;
+    height: 5em;
+    padding: 1em;
+    margin: 1em 3em;
+    box-shadow: 3px 3px 2px var(--txtcolor);
+}
+.toolicon:active{
+    scale: 0.9;
+}
+.toolicon:hover{
+    cursor: pointer;
+}
+.tooltittle{
+    text-align: center;
+}
+.tooltittle:hover{
+    cursor: default;
+}
+.toolsinput{
+    margin: 0.5em;
+    justify-content: center;
+}
+.toolbutton{
+    margin-top: 0.5em;
+    height: 2em;
+    width: 5em;
+}
+.toolbutton:hover{
+    cursor: pointer;
+}
+
+.notescontainer{
+    margin: 1em 0 1em 0;
+    padding: 2em;
+    width: 25em;
+    height: 20em;
+    max-height: 20em;
+    border-radius: 10px;
+    background-color: var(--bgcontainer);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    height: 20em;
+}
+
+@media (max-width: 480px) {
+    .conversationcontainer{
+        width: 15em;
+    }
+    .notescontainer{
+        width: 15em;
+    }
+    .toolicon{
+        height: 3em;
+        width: 3em;
+        margin: 1em 0.5em;
+    }
+}
+@media (max-width: 310px) {
+    .conversationcontainer{
+        width: 10em;
+    }
+    .notescontainer{
+        width: 10em;
+    }
+
+}
+
+.notecontainer{
+    border-radius: 3px;
+    background-color: var(--bgsubcontainer);
+    box-shadow: 1px 1px 2px var(--txtcolor);
+    margin: 0 0 1em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.rightsidenote{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 1em;
+}
+.shortnote{
+    display: flex;
+    margin-left: 1em;
+}
+.deletenotebtn{
+    height: 1em;
+    width: 4em;
+    background-color: var(--txtcolor);
+    color: var(--mainbgcolor);
+    text-align: center;
+}
